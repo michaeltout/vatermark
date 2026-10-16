@@ -17,7 +17,8 @@
     "test:e2e": "playwright test",
     "check": "tsc --noEmit",
     "gifts:generate": "node --import tsx scripts/generate-gifts.ts",
-    "gifts:import": "node --import tsx scripts/import-gifts.ts"
+    "gifts:import": "node --import tsx scripts/import-gifts.ts",
+    "cases:verify": "node --import tsx server/cases/verify-package.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

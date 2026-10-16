@@ -384,6 +384,7 @@ export function App() {
           <Box component="a" href="#main-content" className="brand" aria-label="Vatermark home"><BrandMark /><span className="brand-name">vatermark</span></Box>
           <Stack component="nav" aria-label="Main navigation" direction="row" gap={{ xs: .5, sm: 2 }} alignItems="center">
             <Button color="inherit" href="#verification-info" onClick={() => setAboutOpen(true)} sx={{ display: { xs: 'none', sm: 'inline-flex' }, color: 'text.secondary' }}>About verification</Button>
+            <Button color="inherit" href="/cases" sx={{ color: 'text.secondary' }}>Cases<Box component="span" aria-label="beta" sx={{ ml: .8, px: .8, py: .1, fontSize: '0.6875rem', fontWeight: 600, letterSpacing: '.04em', borderRadius: '6px', bgcolor: 'var(--accent-soft)', color: 'var(--accent)' }}>BETA</Box></Button>
             <span className="network-label"><span className="network-dot" />Testnet preview</span>
             <Button variant="contained" size="small" onClick={() => setGetStarted(true)} sx={{ borderRadius: '999px' }}>Get started</Button>
           </Stack>

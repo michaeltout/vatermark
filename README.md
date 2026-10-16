@@ -297,3 +297,15 @@ button, without network cooldowns or claim quotas. Assigned cards remain private
 to their browser session. Forks must generate and import their own inventory
 before enabling this feature. See [GIFT_CARDS.md](GIFT_CARDS.md) for generation,
 private Firebase imports, and the upstream deployment record.
+
+## Cases (beta)
+
+The **Cases · beta** button in the header opens a signed review workflow for
+clinical images: open a case for one exact image, ask a colleague to review it,
+and get their acceptance, decline and sign-off back as statements they sign in
+Verus Mobile. Every step is verified against VRSCTEST identity state and
+appended to a hash-chained log that can be exported and checked anywhere with
+`pnpm cases:verify`. The feature is folded into `server/cases/`, `src/cases/`
+and [CASES.md](CASES.md); the app's own code and signing flow are unchanged.
+Cases can be opened and found without a service identity; signing steps needs
+the same configuration as image signing above.

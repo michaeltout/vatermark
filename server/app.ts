@@ -15,6 +15,7 @@ import { MetadataService, MAX_METADATA_BYTES, metadataView, type MetadataAdapter
 import { mountMetadataRoutes, expireMetadata } from './metadata-routes.js';
 import { CloudGiftStore, GiftService, LocalGiftStore, loadGiftConfig } from './gifts.js';
 import { mountGiftRoutes } from './gift-routes.js';
+import { mountCaseRoutes } from './cases/index.js';
 
 export type Adapter = Pick<VerusAdapter, 'status' | 'createRequest' | 'resolveIdentity' | 'verifyResponse'>;
 export async function createApp(config: AppConfig, dependencies: { worker?: Worker; adapter?: Adapter; metadataAdapter?: MetadataAdapter; store?: JobStore | CloudJobStore; gifts?: GiftService } = {}) {
@@ -355,6 +356,8 @@ export async function createApp(config: AppConfig, dependencies: { worker?: Work
   const metadataRoutes = mountMetadataRoutes(app, { config, store, service: metadata, owned, expire, view, rateLimit });
   // Gift routes use the common private session and CSRF middleware.
   mountGiftRoutes(app, { service: gifts });
+  // Cases (beta) is an addition on top: it only reuses the middleware, worker and adapter above. See CASES.md.
+  mountCaseRoutes(app, { config, worker, adapter, upload, imageAdmission, rateLimit, signingStatus });
   app.use('/api', (_req, _res, next) => next(new HttpError(404, 'NOT_FOUND', 'API route not found.')));
   const errors: ErrorRequestHandler = (error, req, res, next) => {
     if (req.file?.path) fs.rmSync(req.file.path, { force: true });
