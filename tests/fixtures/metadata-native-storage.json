@@ -1,0 +1,56 @@
+{
+  "provenance": "Captured from local VRSCTEST updateidentity(returntx=true,feeoffer=0) and decoderawtransaction; transaction was never broadcast. Plaintext was submitted through PartialSignData.message with encrypttoaddress. Only synthetic metadata, signature context, and encrypted artifacts are retained.",
+  "context": {
+    "profile": 65,
+    "identityId": "i4GC1YGEVD21afWudGoFJVdnfjJ5XWnCQv",
+    "systemId": "iJhCezBExJHvtyH3fGhNnt2NhU4Ztkf2yq",
+    "nativeSignature": "AgVkAAAAAUEfAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ=="
+  },
+  "capability": {
+    "locator": "f56f22aa74b5eaca43462f58968462d8cc3fa23fc58249fd078d12d1fc101694",
+    "ok": true,
+    "version": 1,
+    "zAddress": "zs16dd8awct2z54v2u50ved2fxlvv3f0vxy2r540436kmzpmjaga42zujvc5hsevxq7pr7evvjxc0p"
+  },
+  "metadata": {
+    "title": "Private image details",
+    "description": "Only the signed image unlocks this text.",
+    "url": "https://example.com/work"
+  },
+  "plaintext": "{\"schema\":\"vatermark-image-metadata\",\"version\":1,\"locator\":\"f56f22aa74b5eaca43462f58968462d8cc3fa23fc58249fd078d12d1fc101694\",\"data\":{\"title\":\"Private image details\",\"description\":\"Only the signed image unlocks this text.\",\"url\":\"https://example.com/work\"}}",
+  "leafDescriptor": {
+    "version": 1,
+    "flags": 5,
+    "objectdata": "367862071d96c395e3bec19404e076eea9bfdcef0df43cdf7294e6e8ad16ca638bd9292d14677b1ed56477227b1905f86d36cf64717ff0dc514bea72995a04beef33b319d896ec25eafd55445be6152e88f19c9236a564c72ef7c7d55149abd5e1e737345d8c5b96700d186f70134c44be87a0623b2728bab59b2a9f8386c2508a46afea619d5170f7f430ba98d7285821b3fac9c23c072be3784980d84c392580b6e80dec78e6042e79acee12097dccc67d5f2f33d3633116cb056aba31d4e2515cfa30d7592f7beb5ad58717ea23952e9ddd405b215dcb20b209c434ceb4ac66ad8ff2f75c01e347be1b72379d16a331eed657137655ee8b72b9d33fd1f9890cc03ad4afdddb3c4395be989c7a1385f342620d8a57b0509e18dfce530196181d7a509397ddb2ece63663b8560769c0906211b1a240e62499066ae9a82e5e76e25923f229c425c5ed1883dd20fd0c",
+    "epk": "445d4bf76a915f69ac99fdf06d3f327534dbb7381634c834d108c918fbe9ffde"
+  },
+  "linkDescriptor": {
+    "version": 1,
+    "flags": 5,
+    "objectdata": "c9a8e39f1c69f66bb553cd73c0117bcd069430499606a9a46c0f52746469ace2eac991499063718a8415b267a9f3f9560a2c93bac7e5e5f56b56733c25b9b2722856fd11ec38e8dca53dbfdfc6535a532636f6b9d2ddd77fb267a571cce85dc801b73ce2da980bc9",
+    "epk": "aea64e0f1142c272ab7bc60dce49bf12bdeebab7e7d691217a3a684c274544c5"
+  },
+  "decryptedLinkHex": "d6ae5ac0571b22d161261b87c748f6e0aee0334d01290001010000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "notaryEvidence": {
+    "version": 1,
+    "type": 3,
+    "systemid": "iJhCezBExJHvtyH3fGhNnt2NhU4Ztkf2yq",
+    "output": {
+      "txid": "0000000000000000000000000000000000000000000000000000000000000000",
+      "voutnum": 0
+    },
+    "state": 2,
+    "evidence": {
+      "version": 1,
+      "chainobjects": [
+        {
+          "vdxftype": "i6ZGLNfqu4cQ3h98VHimETwnWtizMwCJw6",
+          "value": {
+            "version": 1,
+            "hex": "01010108a2ebb2c55f83a8e2a426a53320ed4d42124f4dfd8d0108a2ebb2c55f83a8e2a426a53320ed4d42124f4d01fd75010105fd4f01367862071d96c395e3bec19404e076eea9bfdcef0df43cdf7294e6e8ad16ca638bd9292d14677b1ed56477227b1905f86d36cf64717ff0dc514bea72995a04beef33b319d896ec25eafd55445be6152e88f19c9236a564c72ef7c7d55149abd5e1e737345d8c5b96700d186f70134c44be87a0623b2728bab59b2a9f8386c2508a46afea619d5170f7f430ba98d7285821b3fac9c23c072be3784980d84c392580b6e80dec78e6042e79acee12097dccc67d5f2f33d3633116cb056aba31d4e2515cfa30d7592f7beb5ad58717ea23952e9ddd405b215dcb20b209c434ceb4ac66ad8ff2f75c01e347be1b72379d16a331eed657137655ee8b72b9d33fd1f9890cc03ad4afdddb3c4395be989c7a1385f342620d8a57b0509e18dfce530196181d7a509397ddb2ece63663b8560769c0906211b1a240e62499066ae9a82e5e76e25923f229c425c5ed1883dd20fd0c20445d4bf76a915f69ac99fdf06d3f327534dbb7381634c834d108c918fbe9ffde"
+          }
+        }
+      ]
+    }
+  }
+}

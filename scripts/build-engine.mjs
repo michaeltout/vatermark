@@ -1,0 +1,12 @@
+import { mkdir, copyFile, chmod } from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const root = fileURLToPath(new URL('..', import.meta.url));
+const result = spawnSync('cargo', ['build', '--release', '--locked', '--manifest-path', path.join(root, 'engine/Cargo.toml'), '--bin', 'vatermark-worker'], { stdio: 'inherit' });
+if (result.status !== 0) process.exit(result.status ?? 1);
+await mkdir(path.join(root, 'bin'), { recursive: true });
+const suffix = process.platform === 'win32' ? '.exe' : '';
+const target = path.join(root, 'bin', `vatermark-worker${suffix}`);
+await copyFile(path.join(root, 'engine/target/release', `vatermark-worker${suffix}`), target);
+await chmod(target, 0o755);

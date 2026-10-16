@@ -1,0 +1,16 @@
+packages:
+  - .
+
+# Verus SDKs intentionally depend on official GitHub revisions.
+blockExoticSubdeps: false
+overrides:
+  # The fork's npm files whitelist omits evals.json, which BitGo imports.
+  # Consume the complete pinned official source tarball instead of repacking git.
+  bitcoin-ops: https://github.com/VerusCoin/bitcoin-ops/archive/a5f8f56e658301bc39881d41740b3a0010530efd.tar.gz
+  verus-typescript-primitives: git+https://github.com/VerusCoin/verus-typescript-primitives.git#3ffa9d77a3dd98c23fe4f66cf4368946906de780
+  verusd-rpc-ts-client: git+https://github.com/VerusCoin/verusd-rpc-ts-client.git#e8ea8c21f8a3d845e20189440dcd820d16f00891
+allowBuilds:
+  esbuild: true
+  blake2b: true
+  secp256k1: true
+  tiny-secp256k1: true

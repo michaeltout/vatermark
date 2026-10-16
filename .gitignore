@@ -1,0 +1,14 @@
+node_modules/
+dist/
+engine/target/
+/bin/
+.data/
+.env
+.env.*
+!.env.example
+*.log
+certs/
+test-results/
+playwright-report/
+.firebase/
+.DS_Store

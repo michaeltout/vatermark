@@ -1,0 +1,55 @@
+{
+  "name": "vatermark-web",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.5.2",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "tsx server/index.ts",
+    "build:engine": "node scripts/build-engine.mjs",
+    "build": "tsc --noEmit && vite build",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "test": "vitest run",
+    "test:engine": "cargo test --manifest-path engine/Cargo.toml --release --locked",
+    "test:e2e": "playwright test",
+    "check": "tsc --noEmit",
+    "gifts:generate": "node --import tsx scripts/generate-gifts.ts",
+    "gifts:import": "node --import tsx scripts/import-gifts.ts"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@google-cloud/storage": "^8.4.0",
+    "@mui/icons-material": "^7.3.0",
+    "@mui/material": "^7.3.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "verus-typescript-primitives": "git+https://github.com/VerusCoin/verus-typescript-primitives.git#3ffa9d77a3dd98c23fe4f66cf4368946906de780",
+    "verusd-rpc-ts-client": "git+https://github.com/VerusCoin/verusd-rpc-ts-client.git#e8ea8c21f8a3d845e20189440dcd820d16f00891",
+    "verusid-ts-client": "git+https://github.com/VerusCoin/verusid-ts-client.git#933e8f8da1a51b99ba7533701dddb9914b7a06b7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.18.0",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@types/supertest": "^6.0.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "bip39": "github:VerusCoin/bip39#17d3bbefc80d243903eabd60e0ed64f20aa2bf31",
+    "supertest": "^7.1.4",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^6.0.0",
+    "vitest": "^3.2.4"
+  }
+}
